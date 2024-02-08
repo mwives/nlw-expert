@@ -4,7 +4,7 @@ import z from 'zod'
 
 import { prisma } from '../../lib/prisma'
 import { redis } from '../../lib/redis'
-import { votingPubSub } from '../utils/voting-pub-sub'
+import { votingPubSub } from '../../utils/voting-pub-sub'
 
 export async function voteOnPoll(app: FastifyInstance) {
   app.post('/polls/:pollId/vote', async (request, reply) => {
